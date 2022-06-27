@@ -153,9 +153,9 @@ const Header = ({ bgImg, title }) => {
                           id="menu-item-92"
                           className="menu-item menu-item-92"
                         >
-                          <a href="https://drjamespsychicspells.com/hex-cursejinx-removal/">
-                            Hex/Curse &amp; Jinx Removal
-                          </a>
+                          <Link to="/hex-cursejinx-removal">
+                            <a>Hex/Curse &amp; Jinx Removal</a>
+                          </Link>
                         </li>
                         <li
                           id="menu-item-94"

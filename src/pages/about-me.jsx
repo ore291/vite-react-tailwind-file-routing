@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-import MainBody from "../components/mainBody";
+import MainBody from "../components/MainBody";
 
 const AboutMe = () => {
   return (

@@ -44,6 +44,17 @@ const CleansingNegativity = () => {
         </p>
         <br />
         <p>
+          What is negativity ? Negativity is a bad signs in human life which
+          always take away the positivity in human life that is it’s always make
+          man/woman to be worthless in life these negativity they are a lot of
+          ways to be part of human life it always brings obstacles to human life
+          which Alwayss bring bad people to be around you ,fake relationship
+          always,been broke always ,failure and alot of negative part , Are you
+          seeing any signs of negativity around you send a message now to get
+          rid of the negativity around you and be free forever
+        </p>
+        <br/>
+        <p>
           YOU Will BE ONE OF THOSE ClIENTS WHO GIVE TESTIMONIES ON MY PLATFORM
           FREQUENTLY, KILL YOUR FEAR, TAKE THE RISK AND BE SURE YOU WILL SMILE
           AT THE END.
