@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import MainBody from "../components/mainBody";
 
-const CleansingNegativity = () => {
+const HexRemoval = () => {
   return (
     <>
       <Header
@@ -87,4 +87,4 @@ const CleansingNegativity = () => {
   );
 };
 
-export default CleansingNegativity;
+export default HexRemoval;

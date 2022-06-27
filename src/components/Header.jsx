@@ -118,11 +118,11 @@ const Header = ({ bgImg, title }) => {
                         ? "text-gray-300"
                         : "text-white"
                     }`}
-                    href="#"
+                   
                   >
                     SERVICES
                   </a>
-                  <div className="dropdown-menu top-5 absolute hidden h-auto flex pt-4 group-hover:block  transition-all max-h-screen ease-out duration-300 ">
+                  <div className="dropdown-menu top-7 absolute hidden h-auto flex pt-4 group-hover:block  transition-all max-h-screen ease-out duration-300 ">
                     <ul className=" block w-full bg-black shadow p-8">
                       <div>
                         <li
@@ -161,33 +161,36 @@ const Header = ({ bgImg, title }) => {
                           id="menu-item-94"
                           className="menu-item menu-item-94"
                         >
-                          <a href="https://drjamespsychicspells.com/job-promotionprosperity-spell/">
-                            Job/Promotion &amp; Prosperity Spell
-                          </a>
+                          <Link to="/job-promotionprosperity-spell">
+                            <a>Job/Promotion &amp; Prosperity Spell</a>
+                          </Link>
                         </li>
                         <li
                           id="menu-item-95"
                           className="menu-item menu-item-95"
                         >
-                          <a href="https://drjamespsychicspells.com/love-spell/">
-                            Love Spell
-                          </a>
+                          <Link to="/love-spell">
+                            {" "}
+                            <a>Love Spell</a>
+                          </Link>
                         </li>
                         <li
                           id="menu-item-96"
                           className="menu-item menu-item-96"
                         >
-                          <a href="https://drjamespsychicspells.com/money-attraction-lottery-spell/">
-                            Money Attraction /Lottery Spell
-                          </a>
+                          <Link to="/money-attraction-lottery-spell">
+                            <a>Money Attraction /Lottery Spell</a>
+                          </Link>
                         </li>
                         <li
                           id="menu-item-97"
                           className="menu-item menu-item-97"
                         >
-                          <a href="https://drjamespsychicspells.com/protection-spell/">
-                            Protection Spell
-                          </a>
+                          <Link to="/protection-spell">
+                            <a>
+                              Protection Spell
+                            </a>
+                          </Link>
                         </li>
                       </div>
                     </ul>

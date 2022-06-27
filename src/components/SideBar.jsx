@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SideBar = () => {
   return (
@@ -8,56 +9,64 @@ const SideBar = () => {
       </h4>
       <ul className="flex space-y-2 flex-col items-start justify-center">
         <li className="page_item page-item-11">
-          <a href="https://drjamespsychicspells.com/about-me/">ABOUT ME</a>
+          <Link to="/about-me">
+            <a>ABOUT ME</a>
+          </Link>
         </li>
         <li className="page_item page-item-21">
-          <a href="https://drjamespsychicspells.com/cleansing-banish-and-remove-negativity/">
-            CLEANSING/BANISH AND REMOVE NEGATIVITY
-          </a>
+          <Link to="/cleansing-banish-and-remove-negativity">
+            <a>CLEANSING/BANISH AND REMOVE NEGATIVITY</a>
+          </Link>
         </li>
         <li className="page_item page-item-2">
-          <a href="https://drjamespsychicspells.com/sample-page/">CONTACT ME</a>
+          <Link to="/contact-me">
+            <a>CONTACT ME</a>
+          </Link>
         </li>
         <li className="page_item page-item-23">
-          <a href="https://drjamespsychicspells.com/fertility-pregnancy-spell/">
-            FERTILITY/PREGNANCY SPELL
-          </a>
+          <Link to="/fertility-pregnancy-spell">
+            <a>FERTILITY/PREGNANCY SPELL</a>
+          </Link>
         </li>
         <li className="page_item page-item-30">
-          <a href="https://drjamespsychicspells.com/forgiveness-reconcilation-spell/">
-            FORGIVENESS/RECONCILATION SPELL
-          </a>
+          <Link to="/forgiveness-reconcilation-spell">
+            <a>FORGIVENESS/RECONCILATION SPELL</a>
+          </Link>
         </li>
         <li className="page_item page-item-19">
-          <a href="https://drjamespsychicspells.com/hex-cursejinx-removal/">
-            HEX/CURSE&amp;JINX REMOVAL
-          </a>
+          <Link to="/hex-cursejinx-removal">
+            <a>HEX/CURSE&amp;JINX REMOVAL</a>
+          </Link>
         </li>
         <li className="page_item page-item-5 current_page_item">
-          <a href="https://drjamespsychicspells.com/" aria-current="page">
-            HOME
-          </a>
+          <Link to="/">
+            <a aria-current="page">HOME</a>
+          </Link>
         </li>
         <li className="page_item page-item-15">
-          <a href="https://drjamespsychicspells.com/job-promotionprosperity-spell/">
-            JOB/PROMOTION&amp;PROSPERITY SPELL
-          </a>
+          <Link to="/job-promotionprosperity-spell">
+            <a>JOB/PROMOTION&amp;PROSPERITY SPELL</a>
+          </Link>
         </li>
         <li className="page_item page-item-33">
-          <a href="https://drjamespsychicspells.com/love-spell/">LOVE SPELL</a>
+          <Link to="/love-spell">
+            <a>LOVE SPELL</a>
+          </Link>
         </li>
         <li className="page_item page-item-27">
-          <a href="https://drjamespsychicspells.com/money-attraction-lottery-spell/">
-            MONEY ATTRACTION /LOTTERY SPELL
-          </a>
+          <Link to="/money-attraction-lottery-spell">
+            <a>MONEY ATTRACTION /LOTTERY SPELL</a>
+          </Link>
         </li>
         <li className="page_item page-item-25">
-          <a href="https://drjamespsychicspells.com/protection-spell/">
-            PROTECTION SPELL
-          </a>
+          <Link to="/protection-spell">
+            <a>PROTECTION SPELL</a>
+          </Link>
         </li>
         <li className="page_item page-item-35">
-          <a href="https://drjamespsychicspells.com/footer/">TESTIMONIES</a>
+          <Link to="/testimonies">
+            <a>TESTIMONIES</a>
+          </Link>
         </li>
       </ul>
     </div>

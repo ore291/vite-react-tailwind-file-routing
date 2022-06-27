@@ -6,7 +6,7 @@ const ContactMe = () => {
   return (
     <>
       <Header
-        title="About me"
+        title="Contact me"
         bgImg="https://drjamespsychicspells.com/wp-content/uploads/2020/08/cropped-IMG-20200827-WA0019-1.jpg"
       />
       <MainBody>
