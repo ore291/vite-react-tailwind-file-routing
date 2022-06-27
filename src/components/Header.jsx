@@ -1,16 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { MdMenu, MdClose } from "react-icons/md";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 const Header = ({ bgImg, title }) => {
   let location = useLocation();
-  console.log(location);
   const checkLocation = (slug) => {
     if (location.pathname === slug) {
       return true;
     } else {
       return false;
     }
+  };
+
+  const [modal, setModal] = useState(false);
+  const [linkModal, setLinkModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  const toggleLinkModal = () => {
+    setLinkModal(!linkModal);
   };
   return (
     <>
@@ -25,13 +37,13 @@ const Header = ({ bgImg, title }) => {
         }}
         className=" relative bg-cover  bg-bg-black/60 bg-blend-darken shadow text-[#0a0a0a80]  bg-bottom bg-no-repeat overflow-hidden block"
       >
-        <div className="max-w-[1100px] mx-auto relative  ">
-          <div className="w-auto float-left mx-auto relative z-10 py-[6%] px-[1rem]">
+        <div className="max-w-[1100px] mx-0 md:mx-auto relative flex justify-between items-center md:block px-2 ">
+          <div className="w-auto float-left mx-0 md:mx-auto relative z-10 py-[6%] px-3 md:px-[1rem]">
             <div className="mb-1">
               <Link to="/">
                 <a
                   // href="https://drjamespsychicspells.com/"
-                  className="mb-1 text-white site-title tracking-[-0.03em] font-semibold  text-[2em]"
+                  className="mb-1 text-white site-title tracking-[-0.03em] font-semibold   text-[2em]"
                   rel="home"
                 >
                   drmarkpsychicspells
@@ -40,9 +52,16 @@ const Header = ({ bgImg, title }) => {
             </div>
             <p className="text-white font-medium">drmarkpsychicspells</p>
           </div>
+          <div onClick={toggleModal}>
+            {modal ? (
+              <MdClose className="w-14 h-14 text-white md:hidden" />
+            ) : (
+              <MdMenu className="w-14 h-14 text-white md:hidden" />
+            )}
+          </div>
         </div>
       </div>
-      <header className="w-full bg-[#0a0808] py-2">
+      <header className="w-full bg-[#0a0808] py-2 hidden md:block">
         <nav
           className="
     flex flex-wrap
@@ -118,7 +137,6 @@ const Header = ({ bgImg, title }) => {
                         ? "text-gray-300"
                         : "text-white"
                     }`}
-                   
                   >
                     SERVICES
                   </a>
@@ -187,9 +205,7 @@ const Header = ({ bgImg, title }) => {
                           className="menu-item menu-item-97"
                         >
                           <Link to="/protection-spell">
-                            <a>
-                              Protection Spell
-                            </a>
+                            <a>Protection Spell</a>
                           </Link>
                         </li>
                       </div>
@@ -228,9 +244,136 @@ const Header = ({ bgImg, title }) => {
           </div>
         </nav>
       </header>
-      <div className="bg-white w-full">
-        <div className="max-w-[1100px] mx-auto bg-white   w-full h-32">
-          <h1 className="float-left mx-auto mb-0 font-light py-[3%] px-[1rem] text-[2.5em] text-black">
+      {/* monile nav */}
+      {modal ? (
+        <nav
+          id="site-navigation"
+          className="main-navigation open bg-black text-white p-4"
+        >
+          <div className="menu-menu-1-container">
+            <ul id="menu-menu-1" className="menu">
+              <li
+                id="menu-item-93"
+                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-93"
+              >
+                <Link to="/">
+                  <a aria-current="page">HOME</a>
+                </Link>
+              </li>
+              <li
+                id="menu-item-88"
+                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"
+              >
+                <Link to="/about-me">
+                  <a>ABOUT ME</a>
+                </Link>
+              </li>
+              <li id="menu-item-292" className="menu-item ">
+                <div className="flex justify-between items-center">
+                  <a>SERVICES</a>
+                  <div onClick={toggleLinkModal}>
+                    {linkModal ? (
+                      <FaMinus className="w-4 h-4 text-white" />
+                    ) : (
+                      <FaPlus className="w-4 h-4 text-white" />
+                    )}
+                  </div>
+                </div>
+                {linkModal ? (
+                  <ul className="sub-menu indent-2">
+                    <li
+                      id="menu-item-89"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"
+                    >
+                      <Link to="/cleansing-banish-and-remove-negativity">
+                        <a>Cleansing/Banish &amp; Remove Negativity</a>
+                      </Link>
+                    </li>
+                    <li
+                      id="menu-item-90"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"
+                    >
+                      <Link to="/fertility-pregnancy-spell">
+                        <a>Fertility/Pregnancy Spell</a>
+                      </Link>
+                    </li>
+                    <li
+                      id="menu-item-91"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"
+                    >
+                      <Link to="/forgiveness-reconcilation-spell">
+                        <a>Forgiveness/Reconciliation Spell</a>
+                      </Link>
+                    </li>
+                    <li
+                      id="menu-item-92"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-92"
+                    >
+                      <Link to="/hex-cursejinx-removal">
+                         <a>Hex/Curse &amp; Jinx Removal</a>
+                      </Link>
+                     
+                    </li>
+                    <li
+                      id="menu-item-94"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"
+                    >
+                      <Link to="/job-promotionprosperity-spell">
+                        <a>Job/Promotion &amp; Prosperity Spell</a>
+                      </Link>
+                    </li>
+                    <li
+                      id="menu-item-95"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"
+                    >
+                      <Link to="/love-spell">
+                        <a>Love Spell</a>
+                      </Link>
+                    </li>
+                    <li
+                      id="menu-item-96"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"
+                    >
+                      <Link to="/money-attraction-lottery-spell">
+                        <a>Money Attraction /Lottery Spell</a>
+                      </Link>
+                    </li>
+                    <li
+                      id="menu-item-97"
+                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"
+                    >
+                      <Link to="/protection-spell">
+                        <a>Protection Spell</a>
+                      </Link>
+                    </li>
+                  </ul>
+                ) : null}
+              </li>
+              <li
+                id="menu-item-98"
+                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-98"
+              >
+                <Link to="/testimonies">
+                  <a>TESTIMONIES</a>
+                </Link>
+              </li>
+              <li
+                id="menu-item-291"
+                className="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"
+              >
+                <Link to="/contact-me">
+                  <a>CONTACT</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      ) : null}
+
+      {/* end */}
+      <div className="bg-white">
+        <div className="md:max-w-[1100px] mx-auto bg-white   max-w-[95vw] h-28">
+          <h1 className="md:float-left text-center md:text-left mx-auto mb-0 font-light py-[3%]  px-1 md:px-[1rem] text-2xl md:text-[2.5em] text-black break-words">
             {title.toUpperCase()}
           </h1>
         </div>
