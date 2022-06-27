@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import MainBody from "../components/mainBody";
+import MainBody from "../components/MainBody";
 import TestimonialCard from "../components/TestimonialCard";
 
 const Testimonies = () => {

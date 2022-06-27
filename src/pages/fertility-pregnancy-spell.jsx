@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
-import MainBody from "../components/mainBody";
+import MainBody from "../components/MainBody";
 
 const Fertility = () => {
   return (
