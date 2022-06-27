@@ -1,7 +1,7 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({bgImg,title }) => {
   let location = useLocation();
   console.log(location);
   const checkLocation = (slug) => {
@@ -16,7 +16,7 @@ const Header = () => {
       <div
         style={{
           backgroundImage: `url(
-            "https://drjamespsychicspells.com/wp-content/uploads/2020/08/cropped-IMG-20200827-WA0023.jpg"
+            ${bgImg}
           )`,
         }}
         className=" relative bg-cover  bg-bg-black/60 bg-blend-darken shadow text-[#0a0a0a80]  bg-bottom bg-no-repeat overflow-hidden block"
@@ -24,13 +24,16 @@ const Header = () => {
         <div className="max-w-[1100px] mx-auto relative  ">
           <div className="w-auto float-left mx-auto relative z-10 py-[6%] px-[1rem]">
             <div className="mb-1">
+              <Link to="/">
               <a
-                href="https://drjamespsychicspells.com/"
+                // href="https://drjamespsychicspells.com/"
                 className="mb-1 text-white site-title tracking-[-0.03em] font-semibold  text-[2em]"
                 rel="home"
               >
                 drmarkpsychicspells
               </a>
+              </Link>
+              
             </div>
             <p className="text-white font-medium">drmarkpsychicspells</p>
           </div>
@@ -79,6 +82,7 @@ const Header = () => {
         md:pt-0"
             >
               <li>
+              <Link to="/">
                 <a
                   className={`header-link ${
                     checkLocation("/") ? "text-gray-300" : "text-white"
@@ -87,8 +91,11 @@ const Header = () => {
                 >
                   HOME
                 </a>
+              </Link>
+                
               </li>
               <li>
+              <Link to="/about-me">
                 <a
                   className={`header-link ${
                     checkLocation("/about-me") ? "text-gray-300" : "text-white"
@@ -97,6 +104,7 @@ const Header = () => {
                 >
                   ABOUT ME
                 </a>
+                </Link>
               </li>
               <li>
                 <div className="dropdown group inline  relative cursor-pointer">
@@ -211,7 +219,7 @@ const Header = () => {
       <div className="bg-white w-full">
         <div className="max-w-[1100px] mx-auto bg-white   w-full h-32">
           <h1 className="float-left mx-auto mb-0 font-light py-[3%] px-[1rem] text-[2.5em] text-black">
-            HOME
+            {title.toUpperCase()}
           </h1>
         </div>
       </div>

@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer components {
+
+  .row-container{
+    @apply flex items-center justify-center
+  }
+
+  .col-container {
+    @apply flex flex-col items-center justify-center
+  }
   .header-link {
     @apply md:p-4 py-2 block  hover:text-white/80;
   }
@@ -11,14 +19,44 @@
     @apply text-white py-4;
   }
 
-  .page_item > a{
-      @apply text-[#db6a67]
+  .page_item > a {
+    @apply text-[#db6a67];
   }
 }
 
 /* .dropdown:hover .dropdown-menu {
   display: block;
 } */
+
+.about-footer {
+  background-image: url("https://drjamespsychicspells.com/wp-content/uploads/2020/08/banner.jpg");
+  background-attachment: scroll;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-top: 30px;
+  padding-right: 0px;
+  padding-bottom: 30px;
+  padding-left: 0px;
+}
+
+.about-header{
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.8;
+  word-wrap: break-word;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  box-sizing: inherit;
+  color: #fefefe;
+  font-size: 50px !important;
+  font-weight: 700 !important;
+  text-decoration-style: Solid !important;
+}
 
 .text-box,
 p {
