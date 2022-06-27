@@ -2,7 +2,7 @@ import React from "react";
 
 const SideBar = () => {
   return (
-    <div className="bg-white p-[2rem] mb-6">
+    <div className="bg-white p-4 md:p-[2rem] mb-6">
       <h4 className="text-[#353535] text-2xl font-semibold clear-both mt-[0.2rem] mb-[0.8rem]">
         Quick Links
       </h4>

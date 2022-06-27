@@ -1,7 +1,8 @@
 import React from "react";
 import { useLocation, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
-const Header = ({bgImg,title }) => {
+const Header = ({ bgImg, title }) => {
   let location = useLocation();
   console.log(location);
   const checkLocation = (slug) => {
@@ -13,6 +14,9 @@ const Header = ({bgImg,title }) => {
   };
   return (
     <>
+      <Helmet>
+        <title>{`${title.toUpperCase()} – drmarkpsychicspells`}</title>
+      </Helmet>
       <div
         style={{
           backgroundImage: `url(
@@ -25,15 +29,14 @@ const Header = ({bgImg,title }) => {
           <div className="w-auto float-left mx-auto relative z-10 py-[6%] px-[1rem]">
             <div className="mb-1">
               <Link to="/">
-              <a
-                // href="https://drjamespsychicspells.com/"
-                className="mb-1 text-white site-title tracking-[-0.03em] font-semibold  text-[2em]"
-                rel="home"
-              >
-                drmarkpsychicspells
-              </a>
+                <a
+                  // href="https://drjamespsychicspells.com/"
+                  className="mb-1 text-white site-title tracking-[-0.03em] font-semibold  text-[2em]"
+                  rel="home"
+                >
+                  drmarkpsychicspells
+                </a>
               </Link>
-              
             </div>
             <p className="text-white font-medium">drmarkpsychicspells</p>
           </div>
@@ -82,28 +85,29 @@ const Header = ({bgImg,title }) => {
         md:pt-0"
             >
               <li>
-              <Link to="/">
-                <a
-                  className={`header-link ${
-                    checkLocation("/") ? "text-gray-300" : "text-white"
-                  }`}
-                  href="#"
-                >
-                  HOME
-                </a>
-              </Link>
-                
+                <Link to="/">
+                  <a
+                    className={`header-link ${
+                      checkLocation("/") ? "text-gray-300" : "text-white"
+                    }`}
+                    href="#"
+                  >
+                    HOME
+                  </a>
+                </Link>
               </li>
               <li>
-              <Link to="/about-me">
-                <a
-                  className={`header-link ${
-                    checkLocation("/about-me") ? "text-gray-300" : "text-white"
-                  }`}
-                  href="#"
-                >
-                  ABOUT ME
-                </a>
+                <Link to="/about-me">
+                  <a
+                    className={`header-link ${
+                      checkLocation("/about-me")
+                        ? "text-gray-300"
+                        : "text-white"
+                    }`}
+                    href="#"
+                  >
+                    ABOUT ME
+                  </a>
                 </Link>
               </li>
               <li>
@@ -118,32 +122,32 @@ const Header = ({bgImg,title }) => {
                   >
                     SERVICES
                   </a>
-                  <div className="dropdown-menu top-5 absolute hidden h-auto flex pt-4 group-hover:block transition-all max-h-screen ease-in-out duration-300 ">
+                  <div className="dropdown-menu top-5 absolute hidden h-auto flex pt-4 group-hover:block  transition-all max-h-screen ease-out duration-300 ">
                     <ul className=" block w-full bg-black shadow p-8">
                       <div>
                         <li
                           id="menu-item-89"
                           className="menu-item menu-item-89"
                         >
-                          <a href="https://drjamespsychicspells.com/cleansing-banish-and-remove-negativity/">
-                            Cleansing/Banish &amp; Remove Negativity
-                          </a>
+                          <Link to="/cleansing-banish-and-remove-negativity">
+                            <a>Cleansing/Banish &amp; Remove Negativity</a>
+                          </Link>
                         </li>
                         <li
                           id="menu-item-90"
                           className="menu-item menu-item-90"
                         >
-                          <a href="https://drjamespsychicspells.com/fertility-pregnancy-spell/">
-                            Fertility/Pregnancy Spell
-                          </a>
+                          <Link to="/fertility-pregnancy-spell">
+                            <a>Fertility/Pregnancy Spell</a>
+                          </Link>
                         </li>
                         <li
                           id="menu-item-91"
                           className="menu-item menu-item-91"
                         >
-                          <a href="https://drjamespsychicspells.com/forgiveness-reconcilation-spell/">
-                            Forgiveness/Reconciliation Spell
-                          </a>
+                          <Link to="/forgiveness-reconcilation-spell">
+                            <a>Forgiveness/Reconciliation Spell</a>
+                          </Link>
                         </li>
                         <li
                           id="menu-item-92"
@@ -191,26 +195,31 @@ const Header = ({bgImg,title }) => {
                 </div>
               </li>
               <li>
-                <a
-                  className={`header-link ${
-                    checkLocation("/testimonies")
-                      ? "text-gray-300"
-                      : "text-white"
-                  }`}
-                  href="#"
-                >
-                  TESTIMONIES
-                </a>
+                <Link to="/testimonies">
+                  <a
+                    className={`header-link ${
+                      checkLocation("/testimonies")
+                        ? "text-gray-300"
+                        : "text-white"
+                    }`}
+                    href="#"
+                  >
+                    TESTIMONIES
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  className={`header-link ${
-                    checkLocation("/contact") ? "text-gray-300" : "text-white"
-                  }`}
-                  href="#"
-                >
-                  CONTACT
-                </a>
+                <Link to="/contact-me">
+                  <a
+                    className={`header-link ${
+                      checkLocation("/contact-me")
+                        ? "text-gray-300"
+                        : "text-white"
+                    }`}
+                  >
+                    CONTACT
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
